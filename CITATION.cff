@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: >-
+  Searching for a Navier-Stokes Singularity, and Verifying That I Didn't Find One
+message: >-
+  If you use this software, the recorded results, or the findings catalogue,
+  please cite it as below.
+type: software
+authors:
+  - family-names: Paoli
+    given-names: Samuele
+repository-code: "https://github.com/PSamuele/navier-stokes-blowup-search"
+abstract: >-
+  A verification-driven computational search for finite-time singularities in the
+  3D axisymmetric incompressible Navier-Stokes equations, confined to an
+  engineered compressive domain. The study reports a null result: on two
+  independent grids differing by a factor of two in every length, kinetic energy
+  decreases strictly and the Beale-Kato-Majda integral stays bounded out to
+  T = 0.55, with no evidence of singularity-consistent growth. Accompanying the
+  result is a catalogue of five silent failure modes found in two earlier
+  attempts by the same author - a mesh size field that degenerated to a constant,
+  a vorticity diagnostic amplifying round-off by 1e14 on the symmetry axis, a
+  breakdown threshold triggered by differentiated sampling noise, a stale
+  momentum operator, and a projection step solved without boundary conditions -
+  none of which raised an error, together with the regression tests that detect
+  each. The repository also documents a grid convergence study whose own
+  diagnostics reveal that the mesh was refined according to geometric intuition
+  rather than the flow, leaving the wall boundary layer where the extreme
+  vorticity actually lives resolved by under one element.
+keywords:
+  - computational fluid dynamics
+  - Navier-Stokes equations
+  - finite-time singularity
+  - verification and validation
+  - grid convergence index
+  - axisymmetric flow
+  - FEniCSx
+  - reproducibility
+license: MIT

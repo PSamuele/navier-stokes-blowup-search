@@ -1,0 +1,50 @@
+{
+  "ratio_medium_fine": 1.9904983237524085,
+  "ratio_coarse_medium": 1.7129656477730884,
+  "time_window": [
+    0.0005451894531273788,
+    0.02
+  ],
+  "targets": {
+    "max_vorticity": {
+      "p_median": 1.2059166149328,
+      "gci_median": 0.10207158592161276,
+      "monotone_fraction": 0.665,
+      "fine_value": 744.4352202558334,
+      "richardson_value": 919.5963343037465,
+      "gci_at_reference": 0.2941174552228285
+    },
+    "enstrophy": {
+      "p_median": 3.3335476682420335,
+      "gci_median": 0.0002312974342460224,
+      "monotone_fraction": 0.525,
+      "fine_value": 21044.81717855656,
+      "richardson_value": 21044.815180192516,
+      "gci_at_reference": 1.1869692367626304e-07
+    },
+    "kinetic_energy": {
+      "p_median": 2.4798790880694366,
+      "gci_median": 0.00039170639748681063,
+      "monotone_fraction": 1.0,
+      "fine_value": 175.03158220639122,
+      "richardson_value": 175.1254805441491,
+      "gci_at_reference": 0.0006705813928993973
+    },
+    "max_circulation": {
+      "p_median": 2.7397488561715018,
+      "gci_median": 0.00029118358461893007,
+      "monotone_fraction": 0.65,
+      "fine_value": 5.7221157578377895,
+      "richardson_value": 5.722498512286747,
+      "gci_at_reference": 8.361296440769645e-05
+    },
+    "bkm_integral": {
+      "p_median": 1.182296430498949,
+      "gci_median": 0.049683935076962615,
+      "monotone_fraction": 0.74,
+      "fine_value": 7.298460850214825,
+      "richardson_value": 7.298423892198496,
+      "gci_at_reference": 6.329762036198932e-06
+    }
+  }
+}

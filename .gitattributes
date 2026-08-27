@@ -1,0 +1,16 @@
+# Store text files with LF in the repository regardless of the platform they
+# were authored on.
+* text=auto
+
+# Shell scripts run on Ubuntu instances; CRLF makes them fail at the shebang
+# with "bad interpreter: /bin/bash^M".
+*.sh    text eol=lf
+*.yml   text eol=lf
+
+# Binary assets: never line-ending-convert, never diff as text.
+*.png   binary
+*.gif   binary
+*.mp4   binary
+*.h5    binary
+*.msh   binary
+*.npy   binary

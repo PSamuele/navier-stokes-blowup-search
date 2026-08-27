@@ -1,0 +1,113 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pytest:
+    name: 49 regression tests (FEniCSx)
+    runs-on: ubuntu-latest
+    # The conda solve for dolfinx + PETSc + gmsh is slow; the tests themselves
+    # run in well under a minute.
+    timeout-minutes: 40
+
+    defaults:
+      run:
+        shell: bash -el {0}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # FFCx JIT-compiles every variational form at run time, so a C compiler
+      # must be on PATH or the first fem.form() fails with cffi.VerificationError.
+      - name: Install a C compiler
+        run: sudo apt-get update && sudo apt-get install -y build-essential
+
+      - name: Provision the FEniCSx environment
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: environment.yml
+          cache-environment: true
+
+      - name: Record the versions under test
+        run: |
+          python -c "import dolfinx, petsc4py, numpy; \
+            print('dolfinx ', dolfinx.__version__); \
+            print('petsc4py', petsc4py.__version__); \
+            print('numpy   ', numpy.__version__)"
+
+      - name: Run the test suite
+        run: python -m pytest tests -q
+
+  figures:
+    name: Data figures rebuild from recorded results
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The analysis and figure scripts deliberately depend on nothing but
+      # numpy and matplotlib, so they are checked without the FEniCSx stack.
+      - name: Install the analysis dependencies
+        run: python -m pip install --upgrade numpy matplotlib
+
+      - name: Reproduce the convergence analysis
+        run: python scripts/analyze_convergence.py --study results/convergence_aws
+
+      - name: Rebuild every data figure
+        run: python scripts/make_figures.py
+
+      # Matplotlib output is not byte-reproducible across versions, so the
+      # committed PNGs are not diffed. What is checked is that every figure the
+      # README references was actually produced by this run.
+      - name: Check every referenced figure was produced
+        run: |
+          python - <<'PY'
+          import glob, os, re, sys
+          missing = []
+          for md in ["README.md", *glob.glob("docs/*.md")]:
+              text = open(md, encoding="utf-8").read()
+              # Placeholders for hand-made ParaView renders live in HTML
+              # comments; only what actually renders is required to exist.
+              text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
+              for path in re.findall(r"(?:\.\./)*media/[A-Za-z0-9._/-]+\.(?:png|gif)", text):
+                  target = os.path.normpath(os.path.join(os.path.dirname(md), path))
+                  if not (os.path.exists(target) and os.path.getsize(target)):
+                      missing.append(f"{md} -> {path}")
+          if missing:
+              sys.exit("::error::missing figures: " + "; ".join(missing))
+          print("Every rendered figure reference resolves.")
+          PY
+
+      - name: Check the headline numbers have not moved
+        run: |
+          python - <<'PY'
+          import json, sys
+          m = json.load(open("results/convergence_aws/analysis/convergence_metrics.json"))
+          expected = {"kinetic_energy": (1.39, 0.0016, 1.00),
+                      "max_circulation": (1.00, 0.0086, 0.925),
+                      "max_vorticity": (1.15, 0.0693, 0.745)}
+          bad = []
+          for k, (p, gci, mono) in expected.items():
+              t = m["targets"][k]
+              for name, got, want, tol in (("p", t["p_median"], p, 0.02),
+                                           ("GCI", t["gci_median"], gci, 5e-4),
+                                           ("monotone", t["monotone_fraction"], mono, 0.02)):
+                  if abs(got - want) > tol:
+                      bad.append(f"{k}.{name}: {got:.4f} vs expected {want}")
+          if bad:
+              sys.exit("::error::" + "; ".join(bad))
+          print("Headline convergence numbers unchanged.")
+          PY

@@ -1,0 +1,57 @@
+--- Navier-Stokes cusp solver, Run 3 (dolfinx 0.10.0) ---
+    mesh    : /home/ubuntu/navier-stokes-cusp-study/runs/run_03/results_R3/convergence_aws/meshes/apple_fine.msh
+    out_dir : /home/ubuntu/navier-stokes-cusp-study/runs/run_03/results_R3/convergence_aws/fine
+    ranks   : 8   scheme: ipcs
+Info    : Reading '/home/ubuntu/navier-stokes-cusp-study/runs/run_03/results_R3/convergence_aws/meshes/apple_fine.msh'...
+Info    : 6127 entities
+Info    : 379334 nodes
+Info    : [  0%] Reading nodes                                                                                
+Info    : [ 10%] Reading nodes                                                                                
+Info    : [ 20%] Reading nodes                                                                                
+Info    : [ 30%] Reading nodes                                                                                
+Info    : [ 40%] Reading nodes                                                                                
+Info    : [ 50%] Reading nodes                                                                                
+Info    : [ 60%] Reading nodes                                                                                
+Info    : [ 70%] Reading nodes                                                                                
+Info    : [ 80%] Reading nodes                                                                                
+Info    : [ 90%] Reading nodes                                                                                
+                                                                                
+Info    : 758666 elements
+Info    : [  0%] Reading elements                                                                                
+Info    : [ 10%] Reading elements                                                                                
+Info    : [ 20%] Reading elements                                                                                
+Info    : [ 30%] Reading elements                                                                                
+Info    : [ 40%] Reading elements                                                                                
+Info    : [ 50%] Reading elements                                                                                
+Info    : [ 60%] Reading elements                                                                                
+Info    : [ 70%] Reading elements                                                                                
+Info    : [ 80%] Reading elements                                                                                
+Info    : [ 90%] Reading elements                                                                                
+                                                                                
+Info    : Done reading '/home/ubuntu/navier-stokes-cusp-study/runs/run_03/results_R3/convergence_aws/meshes/apple_fine.msh'
+    cells   : 752803   velocity DOFs: 4534410   pressure DOFs: 379334
+    h_min=2.7677e-04  h_max=1.0863e-02  dx_min(CFL)=1.3839e-04
+    boundary: 2801 axis facets, 3062 wall facets
+    assembling operators...
+    preconditioners: momentum=bjacobi, pressure=hypre, projection=sor
+    min sampled radius = 2.811e-06 (must be > 0; finding B1)
+    building initial condition...
+    initial boundary-condition residual: 0.000e+00
+    divergence-free projection of IC: weak residual 1.361e-03 -> 2.625e-04, ||div u||/||grad u|| 1.086e-02 -> 7.404e-03
+--- integrating to T = 0.55 (adaptive_dt=True) ---
+step       1 | t=0.000050 | dt=4.975e-05 | CFL=0.500 | max|u|=   25.202 | its(8,13,15) | 3.508s/step
+step    1000 | t=0.049730 | dt=4.297e-05 | CFL=0.500 | max|u|=   23.395 | its(7,13,15) | 3.500s/step
+step    2000 | t=0.092402 | dt=4.050e-05 | CFL=0.500 | max|u|=   22.025 | its(7,13,15) | 3.658s/step
+step    3000 | t=0.133654 | dt=4.362e-05 | CFL=0.500 | max|u|=   23.211 | its(7,13,15) | 3.358s/step
+step    4000 | t=0.182896 | dt=4.901e-05 | CFL=0.500 | max|u|=   22.405 | its(7,13,15) | 3.528s/step
+step    5000 | t=0.226881 | dt=3.559e-05 | CFL=0.500 | max|u|=   23.410 | its(7,12,15) | 3.422s/step
+step    6000 | t=0.261204 | dt=3.186e-05 | CFL=0.500 | max|u|=   25.034 | its(7,12,15) | 3.390s/step
+step    7000 | t=0.293601 | dt=3.532e-05 | CFL=0.500 | max|u|=   23.678 | its(7,12,15) | 3.424s/step
+step    8000 | t=0.327671 | dt=3.379e-05 | CFL=0.500 | max|u|=   19.047 | its(7,13,15) | 3.459s/step
+step    9000 | t=0.357388 | dt=2.995e-05 | CFL=0.500 | max|u|=   20.890 | its(7,12,15) | 3.479s/step
+step   10000 | t=0.389079 | dt=3.509e-05 | CFL=0.500 | max|u|=   20.514 | its(7,13,15) | 3.431s/step
+step   11000 | t=0.421083 | dt=2.970e-05 | CFL=0.500 | max|u|=   28.044 | its(7,12,15) | 3.420s/step
+step   12000 | t=0.458075 | dt=3.862e-05 | CFL=0.500 | max|u|=   23.333 | its(7,12,15) | 3.421s/step
+step   13000 | t=0.499068 | dt=3.707e-05 | CFL=0.500 | max|u|=   19.518 | its(7,13,15) | 3.490s/step
+step   14000 | t=0.539635 | dt=4.565e-05 | CFL=0.500 | max|u|=   19.847 | its(7,13,15) | 3.432s/step
+--- completed at t = 0.550000 after 14216 steps (50374.5 s) ---

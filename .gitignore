@@ -1,0 +1,46 @@
+# ─── Local staging for review — never commit ─────────────────────────────────
+Cestino/
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# ─── IDE / OS ────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ─── Heavy simulation output — archived on Zenodo, not in git ────────────────
+# HDF5 velocity fields: 17 MB / 129 MB / 510 MB for the three Run 3 levels,
+# plus 8.8 GB from the archived Run 2. Far beyond GitHub's 100 MB file limit.
+*.h5
+
+# Per-rank MPI checkpoint arrays
+*.npy
+
+# ─── Meshes are regenerated, not shipped ─────────────────────────────────────
+# src/mesh.py is deterministic and verifies what gmsh actually delivered, so the
+# recipe is the reproducible artefact. The .msh binaries total 49 MB; their
+# measured properties are kept as the small *.json files next to them.
+*.msh
+*.msh.bak
+*.opt
+*.pos
+
+# ─── ParaView / VTK intermediates (final GIFs under media/ ARE tracked) ──────
+*.vtu
+*.vtp
+*.pvd
+*.bp/
+*.mp4
+
+# ─── Archives ────────────────────────────────────────────────────────────────
+*.zip
+*.tar
+*.tar.gz

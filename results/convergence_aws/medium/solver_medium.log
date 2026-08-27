@@ -1,0 +1,38 @@
+--- Navier-Stokes cusp solver, Run 3 (dolfinx 0.10.0) ---
+    mesh    : /home/ubuntu/navier-stokes-cusp-study/runs/run_03/results_R3/convergence_aws/meshes/apple_medium.msh
+    out_dir : /home/ubuntu/navier-stokes-cusp-study/runs/run_03/results_R3/convergence_aws/medium
+    ranks   : 8   scheme: ipcs
+Info    : Reading '/home/ubuntu/navier-stokes-cusp-study/runs/run_03/results_R3/convergence_aws/meshes/apple_medium.msh'...
+Info    : 3065 entities
+Info    : 95698 nodes
+Info    : 191394 elements
+Info    : [  0%] Reading elements                                                                                
+Info    : [ 10%] Reading elements                                                                                
+Info    : [ 20%] Reading elements                                                                                
+Info    : [ 30%] Reading elements                                                                                
+Info    : [ 40%] Reading elements                                                                                
+Info    : [ 50%] Reading elements                                                                                
+Info    : [ 60%] Reading elements                                                                                
+Info    : [ 70%] Reading elements                                                                                
+Info    : [ 80%] Reading elements                                                                                
+Info    : [ 90%] Reading elements                                                                                
+                                                                                
+Info    : Done reading '/home/ubuntu/navier-stokes-cusp-study/runs/run_03/results_R3/convergence_aws/meshes/apple_medium.msh'
+    cells   : 188462   velocity DOFs: 1139571   pressure DOFs: 95698
+    h_min=5.5306e-04  h_max=2.1493e-02  dx_min(CFL)=2.7653e-04
+    boundary: 1401 axis facets, 1531 wall facets
+    assembling operators...
+    preconditioners: momentum=bjacobi, pressure=hypre, projection=sor
+    min sampled radius = 5.628e-06 (must be > 0; finding B1)
+    building initial condition...
+    initial boundary-condition residual: 0.000e+00
+    divergence-free projection of IC: weak residual 1.979e-03 -> 3.848e-04, ||div u||/||grad u|| 7.942e-03 -> 5.414e-03
+--- integrating to T = 0.55 (adaptive_dt=True) ---
+step       1 | t=0.000123 | dt=1.229e-04 | CFL=0.500 | max|u|=   25.201 | its(8,12,16) | 0.890s/step
+step    1000 | t=0.097167 | dt=9.454e-05 | CFL=0.500 | max|u|=   21.583 | its(7,12,15) | 0.801s/step
+step    2000 | t=0.197343 | dt=9.058e-05 | CFL=0.500 | max|u|=   20.056 | its(7,11,15) | 0.842s/step
+step    3000 | t=0.268559 | dt=6.345e-05 | CFL=0.500 | max|u|=   24.111 | its(7,12,15) | 0.806s/step
+step    4000 | t=0.334628 | dt=5.629e-05 | CFL=0.500 | max|u|=   22.957 | its(7,12,16) | 0.817s/step
+step    5000 | t=0.397206 | dt=6.744e-05 | CFL=0.500 | max|u|=   23.295 | its(7,12,16) | 0.816s/step
+step    6000 | t=0.475963 | dt=9.761e-05 | CFL=0.500 | max|u|=   21.060 | its(7,12,16) | 0.816s/step
+--- completed at t = 0.550000 after 6780 steps (5767.4 s) ---

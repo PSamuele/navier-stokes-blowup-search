@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="3.0" xmlns:xi="https://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="mesh" GridType="Uniform">
+      <Topology TopologyType="Triangle" NumberOfElements="752803" NodesPerElement="3">
+        <DataItem Dimensions="752803 3" NumberType="Int" Format="HDF">velocity_fine.h5:/Mesh/mesh/topology</DataItem>
+      </Topology>
+      <Geometry GeometryType="XY">
+        <DataItem Dimensions="379334 2" Format="HDF">velocity_fine.h5:/Mesh/mesh/geometry</DataItem>
+      </Geometry>
+    </Grid>
+    <Grid Name="Velocity" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="4.975119058376158e-05" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/4_975119058376158e-05</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.010035943673361926" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_010035943673361926</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.02001774582428997" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_02001774582428997</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.030015688398817283" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_030015688398817283</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.040035462182699315" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_040035462182699315</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.050031208621817959" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_050031208621817959</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.060003615228795167" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_060003615228795167</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.070032687701730351" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_070032687701730351</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.080009405284288557" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_080009405284288557</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.09001838438001003" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_09001838438001003</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.10002293570185417" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_10002293570185417</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.11001144467896153" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_11001144467896153</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.12003667031578234" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_12003667031578234</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.13003284276927135" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_13003284276927135</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.14003316240083363" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_14003316240083363</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.15004078376199378" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_15004078376199378</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.16000743132433626" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_16000743132433626</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.1700151206684655" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_1700151206684655</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.18001113887111223" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_18001113887111223</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.19003597104789388" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_19003597104789388</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.20003930091555597" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_20003930091555597</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.21003416564499675" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_21003416564499675</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.22002334814844843" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_22002334814844843</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.23003382940324127" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_23003382940324127</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.2400241141490034" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_2400241141490034</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.25002224615709651" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_25002224615709651</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.26000974200335719" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_26000974200335719</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.27002339976264722" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_27002339976264722</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.28002466309600821" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_28002466309600821</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.29001084051457249" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_29001084051457249</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.30002289043652181" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_30002289043652181</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.31000205762709993" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_31000205762709993</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.32001697385766015" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_32001697385766015</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.33002738050992536" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_33002738050992536</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.34001717128131775" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_34001717128131775</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.35000369334862991" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_35000369334862991</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.36000210416915635" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_36000210416915635</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.37000889434926021" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_37000889434926021</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.38001915034782535" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_38001915034782535</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.39001725600355447" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_39001725600355447</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.4000001286753177" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_4000001286753177</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.41000767405567906" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_41000767405567906</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.42002216899014294" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_42002216899014294</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.43002088199554805" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_43002088199554805</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.44000449557028937" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_44000449557028937</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.45003765551412384" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_45003765551412384</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.46003644246496106" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_46003644246496106</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.47003368706925158" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_47003368706925158</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.48000707355793393" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_48000707355793393</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.49004135407624499" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_49004135407624499</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.50002750583842837" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_50002750583842837</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.51003939065540593" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_51003939065540593</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.52001580539544623" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_52001580539544623</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.5300253669776589" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_5300253669776589</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.5400013129543626" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_5400013129543626</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.55000000000000004" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="379334 3" Format="HDF">velocity_fine.h5:/Function/Velocity/0_55000000000000004</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

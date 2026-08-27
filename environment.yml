@@ -1,0 +1,31 @@
+# environment.yml - reproducible environment for the Run 3 solver and study.
+#
+# Pinned to the versions the study was developed and validated against.  PETSc is
+# pulled in as a dependency of fenics-dolfinx; the conda-forge PETSc package links
+# HYPRE (BoomerAMG) in every build, so no build selector is needed -- and in fact
+# `petsc=*=*hypre*` matches nothing on conda-forge and makes the solve fail.  The
+# pressure Poisson at production size leans on BoomerAMG; if a future PETSc build
+# ever ships without it, the solver falls back to GAMG on its own.
+#
+#     conda env create -f environment.yml
+#     conda activate fenicsx-env
+#
+# NOTE: a C compiler must also be available on PATH.  FFCx JIT-compiles every
+# variational form at run time, so without gcc the solver fails at the first
+# fem.form() with a cffi.VerificationError.  On a bare Ubuntu instance install it
+# with `sudo apt-get install build-essential` (deploy/aws_setup.sh does this).
+name: fenicsx-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - fenics-dolfinx=0.10.0
+  - petsc
+  - openmpi
+  - gmsh
+  - python-gmsh
+  - numpy
+  - sympy
+  - matplotlib          # convergence plots only; the analysis needs no pandas/scipy
+  - h5py
+  - pytest
