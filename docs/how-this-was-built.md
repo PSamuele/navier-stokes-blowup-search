@@ -22,38 +22,31 @@ amount of generation supplies.
 
 ## Sparring, not delegation
 
-The work ran as a continuous argument, and it ran in both directions. Two exchanges
-stand for the rest; both are visible in the repository, so neither has to be taken
-on trust.
+Nothing here arrived by asking a question and keeping the answer. Every
+substantive decision, how the geometry should be framed, what the convergence
+table was actually saying, which claims in the literature held up under checking,
+when the study was finished, was reached by pushing against a first answer until
+it either held or broke. Several did not hold, and not always on the same side.
 
-**The geometry was being apologised for, and should have been argued.** The domain
-is a 6.07° cone rather than the cusp it was believed to be, and the write-up
-treated that as a shortfall to disclose. I rejected that framing: a modelling
-choice that survives three campaigns needs a justification, not a confession. Working
-the question through inverted the conclusion entirely. A true cusp is **not a
-Lipschitz domain**, so the standard well-posedness theory does not apply to it; a
-loss of regularity observed at the tip could not be attributed to the fluid rather
-than to the boundary's own geometric singularity; and no sequence of grids with a
-common refinement factor exists there, which leaves the Richardson and GCI
-machinery undefined. The cone is the domain in which a negative answer means
-something. That is now [the argument in the
-README](../README.md#why-a-cone-is-the-right-domain-and-a-cusp-would-not-be), and
-it changed what the study claims rather than merely how it reads.
+That mode is not optional with a tool of this kind, and the reason is structural.
+An assistant produces a confident, well-formed answer to almost any question,
+including the ones where it is wrong, and the wrong ones look exactly like the
+right ones. Without someone willing to reject a framing rather than edit its
+wording, the confident version is what survives into the document. What it
+supplies in return is a kind of tirelessness: it will re-derive a result, check a
+citation at source, or rewrite a conclusion it argued for an hour earlier,
+immediately and without defending the earlier position.
 
-**The literature was being read to fit the result.** The null result had been
-framed as confirming that constant-viscosity Navier–Stokes cannot go singular —
-tidy, and convenient. I asked for every citation to be checked at source rather
-than summarised from memory. It was wrong: Hou (2023) reports potentially singular
-behaviour with *uniform* viscosity, and the regularising effect belongs to a
-different paper under different initial conditions. The conclusion was rewritten
-around what actually separates the regimes — initial data tuned to a self-similar
-profile and dynamic rescaling, not the value of ν. The honest version is weaker as
-a headline and considerably harder to attack.
+The other half is judgement about the physics, and it does not come from the tool.
+Deciding that a number is wrong before any analysis says so; choosing which
+invariants are worth checking out of the many that could be; weighing whether
+another campaign would change the answer or only the error bars; deciding that the
+work is finished. None of those is a question with a retrievable answer.
 
-Neither exchange would have produced anything on its own. The search, the
-derivation and the rewriting happened at a speed I could not have matched by hand;
-the judgement that the framing was wrong in the first place is not something the
-tool volunteered.
+Neither half is sufficient alone. Speed without scepticism produces polished
+mistakes faster than before; scepticism without speed produces one campaign a
+year. What this repository records is the two held against each other, across
+three campaigns and several months.
 
 ## The part worth generalising
 

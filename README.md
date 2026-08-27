@@ -397,7 +397,7 @@ around verification rather than around the solver. Full account in
 [`docs/how-this-was-built.md`](docs/how-this-was-built.md).
 
 I chose the problem and the geometry, specified the physics and the parameter
-point, sized and paid for the infrastructure, ran the three campaigns, and read the
+point, sized the infrastructure, ran the three campaigns, and read the
 output. AI assistance did a large share of the implementation — and produced, in
 the first two attempts, all five silent failures above. It also did much of the
 forensic work later, under direction, and wrote the 50 regression tests.
@@ -413,21 +413,16 @@ no amount of generation supplies.
 > verification. Anyone who does not adjust for that produces wrong results faster
 > than before.
 
-**It ran as an argument, in both directions.** Two examples. The write-up treated
-the domain's 6.07° cone as a shortfall to disclose; I rejected that framing, and
-working the question through inverted it — a true cusp is not a Lipschitz domain,
-so a singularity found there could not be attributed to the fluid rather than the
-boundary, and the GCI machinery would be undefined. That argument is
-[in the geometry section](#why-a-cone-is-the-right-domain-and-a-cusp-would-not-be)
-and it changed what the study claims. Separately, the null result had been framed
-on a tidy misreading of the literature; I asked for every citation to be checked at
-source, it did not survive, and the conclusion was rewritten around what actually
-separates the regimes.
-
-The judgement that a framing is wrong is not something the tool volunteers. Run 2
-reported a maximum velocity of 20 beside a maximum vorticity of 10⁸; nothing
-flagged that pair, and it is only obviously wrong to someone who has spent time
-with real flow fields.
+**It ran as an argument, in both directions.** Nothing here arrived by asking a
+question and keeping the answer: every substantive decision was reached by pushing
+against a first answer until it held or broke, and several did not hold. An
+assistant produces a confident, well-formed answer to almost any question,
+including the ones where it is wrong, and the wrong ones look exactly like the
+right ones — without someone willing to reject a framing rather than edit its
+wording, the confident version is what reaches the document. What does not come
+from the tool is judgement about the physics: deciding a number is wrong before any
+analysis says so, choosing which invariants are worth checking, and deciding when
+the work is finished.
 
 *Note on a related but different use of AI in this field:* Wang, Lai,
 Gómez-Serrano and Buckmaster (2023) used physics-informed neural networks as the
