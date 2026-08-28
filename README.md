@@ -9,17 +9,11 @@ samples and the Beale–Kato–Majda integral stays bounded out to `T = 0.55`.
 
 Arriving at an answer worth stating took three attempts. The first two reported a
 spectacular finite-time blow-up that was not there. One reason, found long
-afterwards, was that both had loaded the same mesh file:
-
-```
-0cba6a4c2eb0baa64c19dbde072f180b   run_01/…/apple_domain_R1.msh
-0cba6a4c2eb0baa64c19dbde072f180b   run_02/…/apple_domain_R2.msh
-```
-
-The resolution increase the second campaign was built around had never happened.
+afterwards, was that both had loaded the same mesh file: The resolution increase the second campaign was built around had never happened.
 That was one of five defects, and not one of them raised an error. This repository
 is the third attempt, together with the apparatus that makes it checkable and a
 full account of how the first two produced confident, wrong answers.
+
 ---
 
 ## Contents
