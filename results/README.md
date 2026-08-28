@@ -58,8 +58,10 @@ two must be renamed together.
 The HDF5 velocity fields (`velocity_<level>.h5`: 17 MB / 129 MB / 510 MB) and the
 `.msh` binaries are excluded from git — they exceed GitHub's limits and the
 meshes are reproducible anyway, since `src/mesh.py` is deterministic and verifies
-what gmsh delivered. The fields are archived separately; the small `.json` files
-recording each mesh's *measured* properties are kept here.
+what gmsh delivered. The fields themselves are not published anywhere; they exist
+only on the machine that produced them. The small `.json` files recording each
+mesh's *measured* properties are kept here, and the recorded diagnostics that
+every result rests on are the tracked `blowup_data_<level>.csv`.
 
 ## Regenerating the analysis
 

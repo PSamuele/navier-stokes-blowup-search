@@ -1,6 +1,11 @@
 # ─── Local staging for review — never commit ─────────────────────────────────
 Cestino/
 
+# ─── Personal plain-language walkthrough — local only ────────────────────
+# Notes written for handover, for re-reading years later, and for talking
+# about the project out loud. Deliberately informal; docs/ is the public record.
+_SPIEGAZIONE/
+
 # ─── Python ──────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
@@ -16,9 +21,12 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# ─── Heavy simulation output — archived on Zenodo, not in git ────────────────
+# ─── Heavy simulation output — too large for git ───────────────────
 # HDF5 velocity fields: 17 MB / 129 MB / 510 MB for the three Run 3 levels,
 # plus 8.8 GB from the archived Run 2. Far beyond GitHub's 100 MB file limit.
+# They are not published anywhere: they exist only on the machine that produced
+# them. What every result in the documentation rests on is the recorded
+# diagnostics under results/, which ARE tracked here.
 *.h5
 
 # Per-rank MPI checkpoint arrays
