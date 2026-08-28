@@ -1,24 +1,25 @@
-# Searching for a Navier–Stokes Singularity, and Verifying That I Didn't Find One
+# Searching for a Navier–Stokes Singularity in a Compressive Axisymmetric Flow
 
-I ran the same simulation twice: once on a laptop, once on a 16-core AWS instance,
-to measure what more resolution would do. Months later I found that both runs had
-loaded **the same mesh file, byte for byte**.
+A vortex ring is driven into a narrowing axisymmetric domain, where the geometry
+compresses it and conservation of angular momentum amplifies the swirl. The
+question is whether that amplification can outrun viscosity into a finite-time
+singularity. The answer here is no: on two independent grids differing by a factor
+of two in every length, kinetic energy decreases at every one of 550 recorded
+samples and the Beale–Kato–Majda integral stays bounded out to `T = 0.55`.
+
+Arriving at an answer worth stating took three attempts. The first two reported a
+spectacular finite-time blow-up that was not there. One reason, found long
+afterwards, was that both had loaded the same mesh file:
 
 ```
 0cba6a4c2eb0baa64c19dbde072f180b   run_01/…/apple_domain_R1.msh
 0cba6a4c2eb0baa64c19dbde072f180b   run_02/…/apple_domain_R2.msh
 ```
 
-The refinement I thought I was buying never existed. Neither did the finite-time
-blow-up the second run appeared to find. This repository is the third attempt —
-the one built to be checkable — together with a full account of how the first two
-produced confident, wrong answers without a single error message.
-
-**The result is a null one:** on two independent grids, kinetic energy decreases
-strictly and the Beale–Kato–Majda integral stays bounded out to `T = 0.55`. No
-evidence of singular growth. The interesting part is what it took to be able to
-say that with a straight face.
-
+The resolution increase the second campaign was built around had never happened.
+That was one of five defects, and not one of them raised an error. This repository
+is the third attempt, together with the apparatus that makes it checkable and a
+full account of how the first two produced confident, wrong answers.
 ---
 
 ## Contents
